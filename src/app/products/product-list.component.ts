@@ -9,7 +9,7 @@ import { IProduct } from './product';
 })
 
 export class ProductListComponent implements OnInit {
-  pageTitle: string = 'Product list';
+  pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
@@ -82,6 +82,10 @@ export class ProductListComponent implements OnInit {
     this.listFilter = 'cart';
   }
 
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Product List: ' + message;
+  }
+
   performFilter(filterBy: string): IProduct[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.products.filter((product: IProduct) => 
@@ -93,6 +97,6 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('In On Init')
+    // console.log('In On Init')
   }
 }
