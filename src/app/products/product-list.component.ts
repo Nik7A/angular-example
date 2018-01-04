@@ -4,7 +4,6 @@ import { ProductService } from './product.service';
 // import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
-  selector: 'pm-products',
   templateUrl: './product-list.component.html',
   styleUrls: [ './product-list.component.css' ]
 })
